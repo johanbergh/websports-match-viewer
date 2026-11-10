@@ -32,7 +32,7 @@ All the network processes happens off the main thread, so the window stays respo
 ## Getting started
 Install all the dependencies:
 ```
-    pip install -r requirements
+    pip install -r requirements.txt
 ```
 
 Run the app
@@ -42,9 +42,7 @@ Run the app
 
 Paste any match link from Websports such as `https://www.websports.co.za/livecricket.html?gid=263316&sportid=1` or the game ID alone (such as `263316`).
 
-## Disclaimer
-**This is an independent, unofficial project and is not in any way affiliated with, endorsed by, or officially connected to Websports and Cobitech.**
-
-This project uses undocumented endpoints observed through the Websports website. These endpoints may change or become unavailable without notice. 
-
-The project does not claim ownership of Websports' data or content.
+> [!WARNING]
+> **This is an independent, unofficial project and is not in any way affiliated with, endorsed by, or officially connected to Websports and Cobitech.**
+> This project uses undocumented endpoints observed through the Websports website. These endpoints may change or become unavailable without notice. 
+> The project does not claim ownership of Websports' data or content.
