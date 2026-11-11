@@ -1,9 +1,9 @@
 import requests
 
 # base url's
-WEBSITE_URL = "https://www.websports.co.za"
+WEBSITE_URL = "https://www.websports.co.za/"
 API_BASE = f"{WEBSITE_URL}/api/live"
-LOGO_BASE = f"{WEBSITE_URL}/images/logo"
+LOGO_BASE = f"{WEBSITE_URL}/images/logos/"
 REQUEST_TIMEOUT = 6
 
 session = requests.Session()
