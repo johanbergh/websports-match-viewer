@@ -1,4 +1,4 @@
-# Websports Match Viewer
+# Websports API
 
 A Python-based cricket match viewer that retrieves match data from [Websports](https://www.websports.co.za).
 
