@@ -52,7 +52,7 @@ def build_extras_text(extras_response):
         return "Extras - "
 
     extras = extras_response["extras"][0]
-    return (f"Extras  {extras.get('Extras', 0)} w {extras.get('WideBalls', 0)}, nb {extras.get('NoBalls', 0)}, b {extras.get('Byes', 0)}, lb {extras.get('LegByes', 0)})")
+    return (f"Extras  ({extras.get('Extras', 0)} w {extras.get('WideBalls', 0)}, nb {extras.get('NoBalls', 0)}, b {extras.get('Byes', 0)}, lb {extras.get('LegByes', 0)})")
 
 def build_bowling_rows(bowling_response):
     bowling_rows = []
