@@ -2,7 +2,10 @@ from tkinter import ttk
 import customtkinter as ctk
 
 from src.config import *
-from src.utils import initials
+
+def initials(name):
+    first_letters = "".join(word[0] for word in name.split()[:2])
+    return first_letters.upper() or "?"
 
 class TeamPanel(ctk.CTkFrame):
     """Logo (or initials), team name and score."""

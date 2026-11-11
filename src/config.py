@@ -1,11 +1,5 @@
 import customtkinter as ctk
 
-# where the data comes from
-WEBSITE_URL = "https://www.websports.co.za"
-API_BASE = f"{WEBSITE_URL}/api/live"
-LOGO_BASE = f"{WEBSITE_URL}/images/logos/"
-REQUEST_TIMEOUT = 6 # seconds
-
 # how often the match screen refreshes (in milliseconds)
 REFRESH_INTERVAL_MS = 10000
 

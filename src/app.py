@@ -4,10 +4,10 @@ from tkinter import ttk
 
 import customtkinter as ctk
 
-from src.api import WebsportsAPI
+from api import extract_game_id
 from src.config import *
 from src.screens import LandingScreen, MatchScreen
-from src.utils import extract_game_id
+from src.presenter import build_snapshot
 
 class App(ctk.CTk):
     def __init__(self):
@@ -17,7 +17,6 @@ class App(ctk.CTk):
         self.minsize(1000, 700)
         self._setup_table_style()
 
-        self.api = WebsportsAPI()
         # worker threads put finished results here, the UI thread picks them up
         self._ui_queue = queue.Queue()
 
@@ -125,7 +124,7 @@ class App(ctk.CTk):
 
         def fetch_in_background():
             try:
-                snapshot = self.api.snapshot(game_id, requested_innings, auto_select_innings)
+                snapshot = build_snapshot(game_id, requested_innings, auto_select_innings)
             except Exception:
                 snapshot = None
             self._ui_queue.put(lambda: self._handle_snapshot(session_id, snapshot, is_first_load))

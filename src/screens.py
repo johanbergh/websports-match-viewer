@@ -1,10 +1,14 @@
 import customtkinter as ctk
 
 from src.config import *
-from src.utils import shorten
 from src.widgets import DataTable, LiveCard, TeamPanel, ghost_button
 
 LOGO_DISPLAY_SIZE = 72
+
+def shorten(text, limit=22):
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1] + "..."
 
 # (column id, heading, width, anchor, stretch)
 BATTING_COLUMNS = [
